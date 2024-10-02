@@ -1,0 +1,15 @@
+.game_field {
+     border: 1px solid rgba(54, 0, 43, 0.884);
+     border-radius: 4px;
+     width: 340px;
+     height: 340px;
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.cell {
+     background-color: rgba(255, 172, 237, 0.884);
+     border: 1px solid rgba(54, 0, 43, 0.884);
+     gap: 3px;
+     width: 30px;
+     height: 30px;
+}
