@@ -13,3 +13,9 @@
      width: 30px;
      height: 30px;
 }
+.snake {
+     background-color: rgb(179, 27, 153);
+}
+.food {
+     background-image: url(./pngwing.com.png);
+}
