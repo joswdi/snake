@@ -1,6 +1,14 @@
 let snake = document.querySelector('.snake');
 let food = document.querySelector('.food');
 let score_display = document.querySelector('.score_display');
+let popup = document.querySelector('.popup');
+let play_again = document.querySelector('.play_again');
+// let left = document.querySelector('.left');
+// let top = document.querySelector('.top');
+// let bottom = document.querySelector('.bottom');
+// let right = document.querySelector('.right');
+let width = 10;
+let speed = 0.8;
 let food_index = 0;
 let direction = 1;
 let score = 0;
@@ -27,5 +35,15 @@ function start_game() {
      score_display.innerHTML = score;
      interval_time = 1000;
      snake.forEach((index) => cells[index].classList.add('snake'));
-     interval = setInterval(moveOutcome, interval_time)
+     interval = setInterval(move_outcome, interval_time)
+}
+function move_outcome() {
+     let cells = document.querySelectorAll('.cell');
+     if (check_hits(cells)) {
+          alert('you hit smth.');
+          popup.style.display = 'flex';
+          return clear_interval(interval);
+     } else {
+          move_snake(cells);
+     }
 }
