@@ -26,6 +26,8 @@ body {
 
 .food {
   background-image: url(./pngwing.com.png);
+  width: 20px;
+  height: 20px;
 }
 
 .buttons {
